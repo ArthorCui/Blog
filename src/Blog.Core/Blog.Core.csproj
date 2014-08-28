@@ -30,8 +30,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="StructureMap, Version=2.6.4.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\framework\lib\structuremap\2.6.4\StructureMap.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,6 +46,16 @@
   <ItemGroup>
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\framework\src\OnePiece.Framework.Core\OnePiece.Framework.Core.csproj">
+      <Project>{19a37ab1-1174-47b0-ab31-b7d062052293}</Project>
+      <Name>OnePiece.Framework.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\framework\src\OnePiece.Framework.Web\OnePiece.Framework.Web.csproj">
+      <Project>{ca3fb40a-32d6-4ad1-9d49-1c579a61110a}</Project>
+      <Name>OnePiece.Framework.Web</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
