@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{40CD9592-27F4-4AA1-9193-88E31E27C592}</ProjectGuid>
+    <ProjectGuid>{1FB2D883-6D10-400E-A421-0102D701369B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Blog.Model</RootNamespace>
-    <AssemblyName>Blog.Model</AssemblyName>
+    <RootNamespace>Blog.Common</RootNamespace>
+    <AssemblyName>Blog.Common</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -24,16 +24,12 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\build\bin\Release\</OutputPath>
+    <OutputPath>..\..build\bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SubSonic.Core, Version=3.0.0.3, Culture=neutral, PublicKeyToken=2f6b00d3b7b79d4c, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\framework\lib\Subsonic\SubSonic.Core.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,21 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Memo\Memo.cs" />
+    <Compile Include="ConfigKeys.cs" />
+    <Compile Include="ConnectStrings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Talk\Talk.cs" />
-    <Compile Include="User\Account.cs" />
-    <Compile Include="User\User.cs" />
-    <Compile Include="ViewModels\TalkView.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Note\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\framework\src\OnePiece.Framework.SubSonic.Extension\OnePiece.Framework.SubSonic.Extension.csproj">
-      <Project>{4dfab0ce-a34d-4bc8-98e3-4bbad2ce48cd}</Project>
-      <Name>OnePiece.Framework.SubSonic.Extension</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
