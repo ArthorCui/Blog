@@ -13,7 +13,7 @@ namespace Blog.Model
     /// </summary>
     [Serializable]
     [SubSonicTableNameOverride("talk")]
-    public class Talk :EntityBase
+    public class Talk : EntityBase
     {
         [SubSonicStringLength(2048)]
         [SubSonicNullString]
