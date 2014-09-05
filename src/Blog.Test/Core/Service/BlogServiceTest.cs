@@ -25,7 +25,7 @@ namespace Blog.Test.Core.Service
             }
         } private IBlogDbContext _dbContext;
 
-        [Fact(Skip="SubSonic")]
+        [Fact(Skip = "SubSonic")]
         public void model_generate_use_subsonic_test()
         {
             var talkModel = new Talk();

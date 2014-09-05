@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Blog.Core
 {
-    public interface IBlogService
+    public interface IBlogService : IBlogRepository
     {
+        
     }
 }

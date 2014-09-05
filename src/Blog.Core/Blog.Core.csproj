@@ -65,6 +65,7 @@
     <Compile Include="Services\BlogDbContextService.cs" />
     <Compile Include="Services\BlogService.cs" />
     <Compile Include="Services\I\IBlogDbContext.cs" />
+    <Compile Include="Services\I\IBlogRepository.cs" />
     <Compile Include="Services\I\IBlogService.cs" />
   </ItemGroup>
   <ItemGroup>

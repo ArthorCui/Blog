@@ -42,8 +42,20 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=6.7.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\framework\lib\MySql\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web, Version=6.7.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\framework\lib\MySql\MySql.Web.dll</HintPath>
+    </Reference>
     <Reference Include="StructureMap">
       <HintPath>..\framework\lib\structuremap\2.6.4\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="SubSonic.Core, Version=3.0.0.3, Culture=neutral, PublicKeyToken=2f6b00d3b7b79d4c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\framework\lib\Subsonic\SubSonic.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -109,7 +121,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
+    <Compile Include="Controllers\ImageController.cs" />
+    <Compile Include="Controllers\MemoController.cs" />
+    <Compile Include="Controllers\MessageController.cs" />
+    <Compile Include="Controllers\MovieController.cs" />
+    <Compile Include="Controllers\MusicController.cs" />
+    <Compile Include="Controllers\TalkController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -131,7 +151,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\" />
     <Folder Include="Models\" />
+    <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -149,10 +171,20 @@
       <Project>{19a37ab1-1174-47b0-ab31-b7d062052293}</Project>
       <Name>OnePiece.Framework.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\framework\src\OnePiece.Framework.SubSonic.Extension\OnePiece.Framework.SubSonic.Extension.csproj">
+      <Project>{4dfab0ce-a34d-4bc8-98e3-4bbad2ce48cd}</Project>
+      <Name>OnePiece.Framework.SubSonic.Extension</Name>
+    </ProjectReference>
     <ProjectReference Include="..\framework\src\OnePiece.Framework.Web\OnePiece.Framework.Web.csproj">
       <Project>{ca3fb40a-32d6-4ad1-9d49-1c579a61110a}</Project>
       <Name>OnePiece.Framework.Web</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Talk\List.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

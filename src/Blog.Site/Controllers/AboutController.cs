@@ -7,14 +7,10 @@ using System.Web.Mvc;
 namespace Blog.Site.Controllers
 {
     /// <summary>
-    /// Blog, Note, Diary
-    /// 博客和日记控制器
+    /// About Info
+    /// 关于作者控制器
     /// </summary>
-    public class BlogController : BaseController
+    public class AboutController : BaseController
     {
-        public ActionResult Index()
-        {
-            return View();
-        }
     }
 }

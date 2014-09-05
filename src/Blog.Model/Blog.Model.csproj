@@ -51,7 +51,7 @@
     <Compile Include="ViewModels\TalkView.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Note\" />
+    <Folder Include="Blog\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\framework\src\OnePiece.Framework.SubSonic.Extension\OnePiece.Framework.SubSonic.Extension.csproj">
