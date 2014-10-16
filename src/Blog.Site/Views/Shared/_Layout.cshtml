@@ -1,10 +1,62 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>@ViewBag.Title</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="@Url.Content("~/Content/css/main.css")" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <div>
+    <div class="header">
+        <div class="logo">
+            <h1>
+                <a href="/">一川烟草</a>
+            </h1>
+        </div>
+        <div id="topNav">
+            <nav class="main-nav">
+                <ul>
+                    <li class="">
+                        <a href="/talk/">树洞</a>
+                    </li>
+                    <li class="">
+                        <a href="/blog/">博客</a>
+                    </li>
+                    <li class="">
+                        <a href="/memo/">备忘</a>
+                    </li>
+                    <li class="">
+                        <a href="/book/">读书</a>
+                    </li>
+                    <li class="">
+                        <a href="/image/">图片</a>
+                    </li>
+                    <li class="">
+                        <a href="/music/">音乐</a>
+                    </li>
+                    <li class="">
+                        <a href="/movie/">电影</a>
+                    </li>
+                    <li class="">
+                        <a href="/message/">留言</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div id="cavans">
+        <div class="content_divider"></div>
+        <div class="content_wrapper">
+            <div class="content">
+                @RenderBody()
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        <div>版权所有</div>
     </div>
 </body>
 </html>

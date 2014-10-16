@@ -1,5 +1,14 @@
-﻿@{
-    ViewBag.Title = "List";
+﻿@model List<Talk>
+@using Blog.Model;
+@{
+    ViewBag.Title = "树洞列表";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    List<Talk> talklist = ViewData["talklist"] as List<Talk>;
+    talklist = talklist != null ? talklist : new List<Talk>();
+    var totalCount = ViewData["TotalCount"] as int?;
+    totalCount = totalCount != null ? totalCount : 0;
 }
 
-<h2>List</h2>
+<div class="content">
+</div>

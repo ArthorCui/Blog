@@ -17,10 +17,11 @@ namespace Blog.Site.Controllers
         public ActionResult List(int? page)
         {
             int pageNum = page.HasValue ? page.Value : 0;
-            PagedList<Talk> list = blogService.GetPaged<Talk>("CreatedDate desc", pageNum, 20);
-            ViewData["newslist"] = list;
-            ViewData["pageNum"] = pageNum;
-            return View(list);
+            //PagedList<Talk> list = blogService.GetPaged<Talk>("CreatedDate desc", pageNum, 20);
+            //ViewData["talklist"] = list;
+            //ViewData["pageNum"] = pageNum;
+            //return View(list);
+            return View();
         }
 
     }

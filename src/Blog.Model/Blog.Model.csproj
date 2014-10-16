@@ -52,6 +52,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Blog\" />
+    <Folder Include="Category\" />
+    <Folder Include="Tag\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\framework\src\OnePiece.Framework.SubSonic.Extension\OnePiece.Framework.SubSonic.Extension.csproj">

@@ -1,0 +1,74 @@
+﻿html {
+    background: #fff;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+body, form, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, header, menu, footer, section, video, article, button {
+    margin: 0;
+    padding: 0;
+}
+
+div, ul, dl, dt, dd, p, h1, h2, h3, h4, h5, h6, span, menu, header, footer, section, video, article, button {
+    zoom: 1;
+}
+
+body {
+    font-family: "proxima-nova",Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    line-height: 1.6em;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a {
+    outline: 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: #515151;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+em {
+    color: #d05;
+}
+
+.header {
+    background: url(../image/head.png) repeat-x;
+    height: 45px;
+    margin-bottom: 30px;
+    position: fixed;
+    _position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+}
+
+.logo, #topNav {
+    float: left;
+}
+
+#topNav {
+    position: relative;
+    margin-right: 30px;
+    z-index: 890;
+}
+
+nav ul, nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+
+#cavans {
+    max-width: 960px;
+    margin: 10px auto;
+    padding: 75px;
+}
+
+.content_divider {
+    border-bottom: 1px solid #ddd;
+}
