@@ -6,16 +6,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Blog.Model
+namespace Blog.Model.User
 {
     /// <summary>
-    /// 树洞、自言自语、说说
+    /// User Blog 用户组
     /// </summary>
     [Serializable]
-    [SubSonicTableNameOverride("talk")]
-    public class Talk : EntityBase
+    [SubSonicTableNameOverride("group")]
+    public class Group : EntityBase
     {
-        [SubSonicStringLength(512)]
-        public string Content { get; set; }
+
     }
 }

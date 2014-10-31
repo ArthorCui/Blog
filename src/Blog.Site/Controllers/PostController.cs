@@ -10,7 +10,7 @@ namespace Blog.Site.Controllers
     /// Blog, Note, Diary
     /// 博客和日记控制器
     /// </summary>
-    public class BlogController : BaseController
+    public class PostController : BaseController
     {
         public ActionResult Index()
         {

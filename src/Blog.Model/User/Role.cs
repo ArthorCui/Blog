@@ -9,13 +9,12 @@ using System.Threading.Tasks;
 namespace Blog.Model
 {
     /// <summary>
-    /// 树洞、自言自语、说说
+    /// User Blog 用户角色
     /// </summary>
     [Serializable]
-    [SubSonicTableNameOverride("talk")]
-    public class Talk : EntityBase
+    [SubSonicTableNameOverride("role")]
+    public class Role : EntityBase
     {
-        [SubSonicStringLength(512)]
-        public string Content { get; set; }
+
     }
 }

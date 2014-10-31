@@ -44,14 +44,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Memo\Memo.cs" />
+    <Compile Include="Post\Post.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Talk\Talk.cs" />
     <Compile Include="User\Account.cs" />
+    <Compile Include="User\Group.cs" />
+    <Compile Include="User\Role.cs" />
     <Compile Include="User\User.cs" />
+    <Compile Include="User\UserInfo.cs" />
     <Compile Include="ViewModels\TalkView.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Blog\" />
     <Folder Include="Category\" />
     <Folder Include="Tag\" />
   </ItemGroup>
