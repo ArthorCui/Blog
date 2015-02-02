@@ -8,6 +8,9 @@
     talklist = talklist != null ? talklist : new List<Talk>();
     var totalCount = ViewData["TotalCount"] as int?;
     totalCount = totalCount != null ? totalCount : 0;
+
+    Layout = "~/Views/Shared/_ListLayout.cshtml";
+    
 }
 
 <div class="content">

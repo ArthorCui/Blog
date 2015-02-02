@@ -15,7 +15,7 @@ namespace Blog.Model
     [SubSonicTableNameOverride("talk")]
     public class Talk : EntityBase
     {
-        [SubSonicStringLength(512)]
+        [SubSonicStringLength(2048)]
         public string Content { get; set; }
     }
 }

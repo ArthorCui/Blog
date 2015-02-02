@@ -24,6 +24,16 @@ namespace Blog.Site.Controllers
             return View(list);
         }
 
+        public ActionResult Search(string keywords, int? page)
+        {
+            int pageNum = page.HasValue ? page.Value : 0;
+            var list = blogService.Where<Talk>(x => x.Content.Contains(keywords)).ToPagedList(pageNum, 20);
+            ViewData["talklist"] = list;
+            ViewData["pageNum"] = pageNum;
+
+            return View(list);
+        }
+
         [HttpGet]
         public ActionResult Add()
         {
@@ -40,6 +50,7 @@ namespace Blog.Site.Controllers
         [HttpGet]
         public ActionResult Edit(int talkId)
         {
+            ViewData["IsUpdate"] = true;
             var talk = blogService.Single<Talk>(talkId);
             return View("Add", talk);
         }
@@ -54,5 +65,12 @@ namespace Blog.Site.Controllers
 
             return RedirectToAction("List");
         }
+
+        public ActionResult Delete(int talkId)
+        {
+            var talk = blogService.Delete<Talk>(talkId);
+            return RedirectToAction("List");
+        }
+
     }
 }
