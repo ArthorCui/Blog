@@ -18,7 +18,7 @@ namespace Blog.Core
 
         public SubSonic.Repository.IRepository DbContext
         {
-            get { return new SimpleRepository(this.ConnectionStringName, SimpleRepositoryOptions.None); }
+            get { return new SimpleRepository(this.ConnectionStringName, SimpleRepositoryOptions.RunMigrations); }
         }
     }
 }

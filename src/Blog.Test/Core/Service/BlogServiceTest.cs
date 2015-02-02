@@ -28,7 +28,7 @@ namespace Blog.Test.Core.Service
         [Fact(Skip = "SubSonic")]
         public void model_generate_use_subsonic_test()
         {
-            var talkModel = new Talk();
+            var talkModel = new Talk() { Content="First talk."};
             var ret = dbContext.Add<Talk>(talkModel);
 
             Console.WriteLine(ret);
