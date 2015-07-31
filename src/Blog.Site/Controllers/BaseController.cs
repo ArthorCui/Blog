@@ -22,7 +22,7 @@ namespace Blog.Site.Controllers
             }
         } private IBlogService _blogService;
 
-        const int PAGE_SIZE = 20;
+        protected const int PAGE_SIZE = 20;
 
         bool isUpdateMode = false;
     }

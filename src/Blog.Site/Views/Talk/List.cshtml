@@ -6,6 +6,8 @@
 
     List<Talk> talklist = ViewData["talklist"] as List<Talk>;
     talklist = talklist != null ? talklist : new List<Talk>();
+    var pageNum = ViewData["pageNum"] as int?;
+    pageNum = pageNum != null ? pageNum : 0;
     var totalCount = ViewData["TotalCount"] as int?;
     totalCount = totalCount != null ? totalCount : 0;
 

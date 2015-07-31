@@ -17,9 +17,10 @@ namespace Blog.Site.Controllers
         public ActionResult List(int? page)
         {
             int pageNum = page.HasValue ? page.Value : 0;
-            PagedList<Talk> list = blogService.GetPaged<Talk>("CreatedDate desc", pageNum, 20);
+            PagedList<Talk> list = blogService.GetPaged<Talk>("CreatedDate desc", pageNum, PAGE_SIZE);
             ViewData["talklist"] = list;
             ViewData["pageNum"] = pageNum;
+            ViewData["toatalCount"] = list.Count;
 
             return View(list);
         }
@@ -27,7 +28,7 @@ namespace Blog.Site.Controllers
         public ActionResult Search(string keywords, int? page)
         {
             int pageNum = page.HasValue ? page.Value : 0;
-            var list = blogService.Where<Talk>(x => x.Content.Contains(keywords)).ToPagedList(pageNum, 20);
+            var list = blogService.Where<Talk>(x => x.Content.Contains(keywords)).ToPagedList(pageNum, PAGE_SIZE);
             ViewData["talklist"] = list;
             ViewData["pageNum"] = pageNum;
 

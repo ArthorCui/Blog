@@ -25,16 +25,16 @@ namespace Blog.Test.Core.Service
             }
         } private IBlogDbContext _dbContext;
 
-        [Fact(Skip = "SubSonic")]
+        //[Fact(Skip = "SubSonic")]
         public void model_generate_use_subsonic_test()
         {
-            var talkModel = new Talk() { Content="First talk."};
+            var talkModel = new Talk() { Content="Second talk test."};
             var ret = dbContext.Add<Talk>(talkModel);
 
             Console.WriteLine(ret);
 
-            var tbModel = dbContext.Single<Talk>(x => x.Id == 1);
-            Assert.Equal(1, (int)tbModel.Status);
+            var tbModel = dbContext.Single<Talk>(x => x.Id == 2);
+            Assert.Equal(2, (int)tbModel.Status);
         }
     }
 }
