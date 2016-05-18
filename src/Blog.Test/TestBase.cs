@@ -8,7 +8,7 @@ using Xunit;
 
 namespace Blog.Test
 {
-    public class TestBase : IUseFixture<TestBase>
+    public class TestBase : IClassFixture<TestBase>
     {
         public void SetFixture(TestBase data)
         {
